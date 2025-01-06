@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        input {
+            width: 200px;
+            padding: 10px 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>회원가입</h1>
+    <form action="/signup" method="post" autocomplete="off">
+        <input type="text" name="username" placeholder="사용할 이름을 입력해주세요" required><br><br>
+        <input type="email" name="useremail" placeholder="이메일 주소를 입력해주세요" required><br><br>
+        <input type="password" name="userpassword" placeholder="비밀번호를 입력해주세요" required><br><br>
+        <textarea cols="40" rows="5" name="bio" placeholder="자기소개말을 입력해주세요" 
+            required style="resize: none;"></textarea><br>
+        <button type="submit">회원가입</button>
+    </form><br>
+    <button><a href="/">돌아가기</a></button>
+</body>
+</html>
