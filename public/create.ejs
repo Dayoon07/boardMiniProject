@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #createPost input {
+            width: 200px;
+            padding: 5px 10px;
+        }
+        #createPost textarea {
+            resize: none;
+        }
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <a href="/">돌아가기</a>
+    <h1>게시물 작성</h1>
+    <form action="/board/create" method="post" id="createPost">
+        <input type="text" name="writer" id="writer" placeholder="작성자 이름" required><br><br>
+        <input type="text" name="title" id="title" placeholder="제목" required><br><br>
+        <textarea cols="35" rows="7" name="content" id="content" placeholder="내용" required></textarea><br>
+        <button type="submit">작성</button>
+    </form>
+</body>
+</html>
