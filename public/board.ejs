@@ -1,18 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><%= board.title %></title>
 </head>
 <body>
+    <a href="/">돌아가기</a>
     <h1><%= board.title %></h1>
     <p>작성자: <%= board.writer %></p>
     <p>내용: <%= board.content %></p>
+    <img src="<%= board.imgname %>" width="200" /><br>
     <a href="/board/edit/<%= board.id %>">수정</a>
-    <h2>댓글</h2>
-    <ul>
-        <% comments.forEach(comment => { %>
-            <li><%= comment.comment_name %>: <%= comment.comment_content %></li>
-        <% }); %>
-    </ul>
 </body>
 </html>

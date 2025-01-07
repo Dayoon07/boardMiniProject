@@ -3,20 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>회원가입</title>
+    <style>
+        input {
+            margin-bottom: 10px;
+        }
+        input:focus {
+            outline: none;
+        }
+    </style>
 </head>
 <body>
+    <a href="/">돌아가기</a>
+
     <form action="/signup" method="post">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" required>
-    
-        <label for="useremail">Email:</label>
-        <input type="email" id="useremail" name="useremail" required>
-    
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" required>
-    
-        <button type="submit">Sign Up</button>
+        <input type="text" id="username" name="username" placeholder="사용자 이름" required><br>
+        <input type="email" id="useremail" name="useremail" placeholder="사용자 이메일" required><br>
+        <input type="password" id="password" name="password" placeholder="비밀번호" required><br>
+        <button type="submit">회원가입</button>
     </form>
 </body>
 </html>

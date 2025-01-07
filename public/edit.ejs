@@ -1,16 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>게시물 수정</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수정</title>
+    <style>
+        textarea {
+            resize: none;
+        }
+    </style>
 </head>
 <body>
     <h1>게시물 수정</h1>
-    <form action="/board/edit/<%= board.id %>" method="POST">
-        <label for="title">제목:</label>
-        <input type="text" name="title" id="title" value="<%= board.title %>" required><br>
-        <label for="content">내용:</label>
-        <textarea name="content" id="content" required><%= board.content %></textarea><br>
+    <form action="/board/edit/<%= board.id %>" method="post">
+        <label for="title">제목</label><br>
+        <input type="text" name="title" id="title" value="<%= board.title %>" required><br><br>
+        <label for="content">내용</label><br>
+        <textarea cols="35" rows="7" name="content" id="content" required><%= board.content %></textarea><br>
         <button type="submit">수정</button>
+        <button type="button" onclick="history.back()" style="cursor: pointer;">취소</button>
     </form>
 </body>
 </html>

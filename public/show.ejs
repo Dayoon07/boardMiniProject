@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a href="/">돌아가기</a>
+    <h1>타이틀</h1>
+    <table style="border-collapse: collapse; width: 100%;">
+        <thead>
+            <tr style="border-bottom: 1px solid #000;">
+                <th style="text-align: left; padding: 8px;">고유 아이디</th>
+                <th style="text-align: left; padding: 8px;">날짜</th>
+                <th style="text-align: left; padding: 8px;">파일이름</th>
+                <th style="text-align: left; padding: 8px;">삭제여부</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% ls.forEach(e => { %>
+                <tr>
+                    <td style="padding: 8px;"><%= e.id %></td>
+                    <td style="padding: 8px;"><%= e.imgname %></td>
+                    <td style="padding: 8px;"><%= e.datetime %></td>
+                    <td style="padding: 8px;">
+                        <form action="/showDeleteButOneRecord/del/<%= e.id %>" method="post">
+                            <button type="submit" style="cursor: pointer;">삭제</button>
+                        </form>
+                    </td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</body>
+</html>
